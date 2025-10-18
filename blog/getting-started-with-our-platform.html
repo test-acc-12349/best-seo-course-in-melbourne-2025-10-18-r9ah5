@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete guide to SEO fundamentals. Learn keyword research, on-page optimization, link building, and technical SEO strategies to improve your website rankings.">
+    <meta name="keywords" content="SEO fundamentals, keyword research, on-page optimization, link building, technical SEO, search engine optimization">
+    <meta name="author" content="SEO Academy">
+    <meta property="og:title" content="Complete Guide to SEO Fundamentals - SEO Academy Melbourne">
+    <meta property="og:description" content="Master the essential SEO fundamentals and strategies that drive organic traffic to your website.">
+    <meta property="og:type" content="article">
+    <title>Complete Guide to SEO Fundamentals - SEO Academy Melbourne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-background {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1460925895917-adf4e565db6d?w=1200&h=800&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25;
+            z-index: 1;
+        }
+        
+        .hero-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button.active {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cta-background {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            position: relative;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 28px;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 36px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            border: 2px solid #667eea;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-content p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            font-size: 1.0625rem;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        .blog-content li {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            font-size: 1.0625rem;
+        }
+
+        .blog-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .blog-highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .blog-highlight p {
+            margin-bottom: 0;
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SEO Academy</span>
+                </a>
+                <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5/blog.html" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Content Section -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Blog Header -->
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                    Complete Guide to SEO Fundamentals: Master the Basics in 2025
+                </h1>
+                <div class="flex items-center text-gray-600 mb-8">
+                    <span class="mr-6"><i class="fas fa-calendar mr-2"></i>Published on January 2025</span>
+                    <span><i class="fas fa-clock mr-2"></i>12 min read</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop" alt="SEO fundamentals concept showing search engine optimization strategies and digital marketing analytics" class="w-full rounded-lg shadow-lg mb-8">
+            </div>
+
+            <!-- Blog Content -->
+            <div class="blog-content prose prose-lg max-w-none">
+                <p>
+                    Search Engine Optimization (SEO) has become an essential skill in the digital marketing landscape. Whether you're running a small business, managing a blog, or working as a digital marketer, understanding SEO fundamentals is crucial for driving organic traffic to your website. In this comprehensive guide, we'll explore the core principles of SEO and provide you with actionable strategies to improve your website's visibility in search engine results.
+                </p>
+
+                <h2>What is SEO and Why Does It Matter?</h2>
+                <p>
+                    SEO is the practice of optimizing your website to rank higher in search engine results pages (SERPs) for relevant keywords and phrases. When potential customers search for products, services, or information related to your business, you want your website to appear at the top of the results. This organic visibility drives qualified traffic to your site without requiring paid advertising.
+                </p>
+                <p>
+                    The importance of SEO cannot be overstated. Studies show that over 93% of online experiences begin with a search engine, and the majority of clicks go to the top three results on the first page. By mastering SEO fundamentals, you can significantly increase your online visibility, attract more qualified leads, and ultimately grow your business revenue.
+                </p>
+
+                <div class="blog-highlight">
+                    <p><strong>Key Takeaway:</strong> SEO is not a one-time effort but an ongoing process. Search algorithms continuously evolve, and successful SEO requires consistent optimization and adaptation to maintain and improve your rankings.</p>
+                </div>
+
+                <h2>The Three Pillars of SEO</h2>
+                <p>
+                    Effective SEO strategy is built on three fundamental pillars that work together to improve your website's search visibility. Understanding these pillars is essential for anyone looking to master SEO fundamentals.
+                </p>
+
+                <h3>1. Technical SEO</h3>
+                <p>
+                    Technical SEO focuses on the backend structure and performance of your website. It ensures that search engines can easily crawl, index, and understand your site's content. Key technical SEO elements include:
+                </p>
+                <ul>
+                    <li><strong>Site Speed:</strong> Fast-loading pages are crucial for both user experience and search rankings. Optimize images, leverage caching, and minimize code to improve page load times.</li>
+                    <li><strong>Mobile Responsiveness:</strong> With over 60% of searches happening on mobile devices, having a mobile-friendly website is no longer optional—it's essential.</li>
+                    <li><strong>XML Sitemaps:</strong> These help search engines discover and index all pages on your website more efficiently.</li>
+                    <li><strong>Robots.txt:</strong> This file tells search engines which pages they can and cannot crawl on your site.</li>
+                    <li><strong>SSL Certificate:</strong> A secure HTTPS connection is now a ranking factor and builds trust with your visitors.</li>
+                    <li><strong>Structured Data Markup:</strong> Using schema markup helps search engines better understand your content and can lead to rich snippets in search results.</li>
+                </ul>
+
+                <h3>2. On-Page SEO</h3>
+                <p>
+                    On-page SEO refers to the optimization of individual web pages to rank higher and earn more relevant traffic. This includes both the content and the HTML source code of the page. Critical on-page SEO elements include:
+                </p>
+                <ul>
+                    <li><strong>Title Tags:</strong> Your page title should be compelling, include your target keyword, and be between 50-60 characters for optimal display in search results.</li>
+                    <li><strong>Meta Descriptions:</strong> A well-written meta description (150-160 characters) summarizes your page content and influences click-through rates from search results.</li>
+                    <li><strong>Header Tags (H1, H2, H3):</strong> Use header tags to structure your content logically. Each page should have one H1 tag that includes your primary keyword.</li>
+                    <li><strong>Keyword Optimization:</strong> Naturally incorporate your target keywords throughout your content, including in the first 100 words of your page.</li>
+                    <li><strong>Content Quality:</strong> Create comprehensive, valuable content that addresses user intent and provides genuine value to your readers.</li>
+                    <li><strong>Internal Linking:</strong> Link to other relevant pages on your website to establish information hierarchy and distribute page authority.</li>
+                </ul>
+
+                <h3>3. Off-Page SEO</h3>
+                <p>
+                    Off-page SEO involves activities outside your website that impact your search rankings. The most significant off-page factor is link building. Key off-page SEO strategies include:
+                </p>
+                <ul>
+                    <li><strong>Backlink Building:</strong> Earn links from high-authority, relevant websites. Quality matters more than quantity—one link from an authoritative site is worth more than dozens from low-quality sites.</li>
+                    <li><strong>Social Signals:</strong> While not a direct ranking factor, social media presence and engagement can amplify your content reach and generate backlinks.</li>
+                    <li><strong>Brand Mentions:</strong> Search engines monitor brand mentions across the web, even without links. Building brand awareness contributes to SEO success.</li>
+                    <li><strong>Guest Posting:</strong> Writing guest posts on reputable websites in your industry can help you earn quality backlinks and establish authority.</li>
+                </ul>
+
+                <h2>Keyword Research: The Foundation of SEO</h2>
+                <p>
+                    Keyword research is the foundation of any successful SEO strategy. It involves identifying the terms and phrases your target audience uses when searching for products, services, or information related to your business. Proper keyword research helps you understand user intent and create content that matches what people are actually searching for.
+                </p>
+                <p>
+                    When conducting keyword research, focus on:
+                </p>
+                <ul>
+                    <li><strong>Search Volume:</strong> Look for keywords with decent search volume that indicate genuine user interest.</li>
+                    <li><strong>Keyword Difficulty:</strong> Balance high-volume keywords with those you have a realistic chance of ranking for based on your website's authority.</li>
+                    <li><strong>User Intent:</strong> Understand whether users searching for a keyword are looking for information, products, or services. Align your content with their intent.</li>
+                    <li><strong>Long-Tail Keywords:</strong> These longer, more specific phrases typically have lower competition and higher conversion rates.</li>
+                    <li><strong>Competitor Analysis:</strong> Analyze which keywords your competitors are ranking for and identify opportunities you might have missed.</li>
+                </ul>
+
+                <h2>Creating SEO-Friendly Content</h2>
+                <p>
+                    Content is king in SEO. Search engines prioritize websites that provide valuable, relevant, and comprehensive content that satisfies user intent. When creating content, keep these principles in mind:
+                </p>
+                <p>
+                    <strong>Write for Your Audience First:</strong> While keyword optimization is important, your primary focus should be creating content that genuinely helps your readers. Content that serves user needs will naturally perform better in search results.
+                </p>
+                <p>
+                    <strong>Use Descriptive Headings:</strong> Structure your content with clear headings that include relevant keywords. This helps both search engines and users understand the content hierarchy.
+                </p>
+                <p>
+                    <strong>Optimize for Featured Snippets:</strong> Featured snippets are the highlighted answers that appear at the top of search results. Format your content with clear definitions, lists, and tables to increase your chances of earning featured snippet positions.
+                </p>
+                <p>
+                    <strong>Include Multimedia:</strong> Incorporate images, videos, and infographics to make your content more engaging and shareable. Always optimize images with descriptive alt text that includes relevant keywords.
+                </p>
+                <p>
+                    <strong>Maintain Optimal Content Length:</strong> While there's no magic word count, comprehensive content that thoroughly covers a topic tends to rank better. Aim for at least 1,500 words for competitive keywords, but prioritize quality over quantity.
+                </p>
+
+                <div class="blog-highlight">
+                    <p><strong>Pro Tip:</strong> Update your existing content regularly. Search engines favor fresh content, and updating old posts with new information, statistics, and examples can help maintain and improve your rankings.</p>
+                </div>
+
+                <h2>Link Building Strategies</h2>
+                <p>
+                    Backlinks remain one of the most important ranking factors in Google's algorithm. A backlink is essentially a vote of confidence from another website. However, not all links are created equal. Focus on building high-quality links from relevant, authoritative websites.
+                </p>
+                <p>
+                    Effective link-building strategies include:
+                </p>
+                <ul>
+                    <li><strong>Create Link-Worthy Content:</strong> The best way to earn links is to create exceptional content that people naturally want to link to. This could be original research, comprehensive guides, or unique insights.</li>
+                    <li><strong>Reach Out to Relevant Websites:</strong> Identify websites in your industry that might benefit from linking to your content. Personalize your outreach and explain why your content would be valuable to their audience.</li>
+                    <li><strong>Leverage Your Network:</strong> Ask colleagues, partners, and satisfied customers to link to your website or share your content.</li>
+                    <li><strong>Monitor Your Competitors:</strong> Use SEO tools to see where your competitors are getting links. Look for similar opportunities to build links from those sources.</li>
+                    <li><strong>Avoid Black Hat Tactics:</strong> Never engage in link schemes, paid links, or other manipulative practices. These can result in severe penalties from search engines.</li>
+                </ul>
+
+                <h2>Technical SEO Best Practices</h2>
+                <p>
+                    Beyond the basics, several technical factors significantly impact your SEO performance. Ensuring your website is technically sound will give you a competitive advantage in search rankings.
+                </p>
+                <p>
+                    <strong>Core Web Vitals:</strong> Google's Core Web Vitals measure user experience factors including loading speed, interactivity, and visual stability. Optimizing these metrics is crucial for maintaining good search rankings.
+                </p>
+                <p>
+                    <strong>URL Structure:</strong> Use descriptive, keyword-rich URLs that are easy for both humans and search engines to understand. Avoid long, complicated URLs with unnecessary parameters.
+                </p>
+                <p>
+                    <strong>Breadcrumb Navigation:</strong> Implement breadcrumb navigation to help users and search engines understand your site structure and navigate your pages more easily.
+                </p>
+                <p>
+                    <strong>404 Error Handling:</strong> Regularly check for broken links and fix them promptly. Implement proper 301 redirects when pages are moved or deleted.
+                </p>
+                <p>
+                    <strong>Canonical Tags:</strong> Use canonical tags to tell search engines which version of a page is the original, preventing duplicate content issues.
+                </p>
+
+                <h2>Measuring SEO Success</h2>
+                <p>
+                    To know whether your SEO efforts are working, you need to track relevant metrics and key performance indicators (KPIs). Important SEO metrics include:
+                </p>
+                <ul>
+                    <li><strong>Organic Traffic:</strong> Monitor the number of visitors coming to your site from search engines using Google Analytics.</li>
+                    <li><strong>Keyword Rankings:</strong> Track your rankings for target keywords and monitor how they change over time.</li>
+                    <li><strong>Click-Through Rate (CTR):</strong> Measure the percentage of search results clicks that lead to your website.</li>
+                    <li><strong>Conversion Rate:</strong> Track how many organic visitors complete desired actions on your website.</li>
+                    <li><strong>Backlink Profile:</strong> Monitor the number and quality of backlinks pointing to your site.</li>
+                    <li><strong>Page Load Speed:</strong> Track your website's performance and ensure it meets Core Web Vitals standards.</li>
+                </ul>
+
+                <h2>Common SEO Mistakes to Avoid</h2>
+                <p>
+                    As you implement SEO strategies, be aware of common mistakes that can harm your rankings:
+                </p>
+                <ul>
+                    <li><strong>Keyword Stuffing:</strong> Don't overuse keywords in your content. This practice looks unnatural and can trigger search engine penalties.</li>
+                    <li><strong>Ignoring Mobile Optimization:</strong> With mobile-first indexing, your mobile site is now your primary site for search rankings.</li>
+                    <li><strong>Neglecting User Experience:</strong> SEO is not just about search engines—it's about creating a great experience for your visitors.</li>
+                    <li><strong>Publishing Low-Quality Content:</strong> Thin or duplicate content provides little value and can hurt your rankings.</li>
+                    <li><strong>Ignoring Analytics:</strong> Regularly review your SEO data to understand what's working and what needs improvement.</li>
+                    <li><strong>Expecting Overnight Results:</strong> SEO is a long-term strategy. It typically takes 3-6 months to see significant results.</li>
+                </ul>
+
+                <h2>Conclusion: Your SEO Journey Starts Here</h2>
+                <p>
+                    Mastering SEO fundamentals is an investment in your website's long-term success. By implementing the strategies outlined in this guide—focusing on technical SEO, on-page optimization, quality content creation, and strategic link building—you'll establish a strong foundation for organic growth.
+                </p>
+                <p>
+                    Remember that SEO is an evolving field. Search algorithms change regularly, and staying updated with the latest best practices is essential for maintaining your competitive advantage. Whether you're just starting your SEO journey or looking to refine your existing strategy, the fundamentals covered in this guide will serve as your roadmap to improved search visibility and increased organic traffic.
+                </p>
+                <p>
+                    Ready to take your SEO knowledge to the next level? Consider enrolling in our comprehensive SEO course at SEO Academy Melbourne, where you'll learn from industry experts and master advanced strategies to transform your digital presence.
+                </p>
+            </div>
+
+            <!-- CTA Section within Blog -->
+            <div class="mt-16 p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    Want to Master SEO Completely?
+                </h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    This guide covers the fundamentals, but there's so much more to learn. Our comprehensive SEO course in Melbourne will teach you advanced strategies, real-world techniques, and insider secrets used by top SEO professionals.
+                </p>
+                <a href="https://seo.com" class="btn-primary text-lg px-8 py-4">
+                    Enroll in Our SEO Course
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="mt-16 pt-12 border-t border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="border border-gray-200 rounded-lg p-6 hover-lift">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Advanced Keyword Research Techniques</h4>
+                        <p class="text-gray-600 mb-4">Learn how to find untapped keyword opportunities and analyze competitor keywords to gain a competitive edge in your niche.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-6 hover-lift">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Link Building Strategies That Work</h4>
+                        <p class="text-gray-600 mb-4">Discover proven link-building tactics that help you earn high-quality backlinks and improve your domain authority.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1: About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">SEO Academy</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Empowering professionals with practical SEO knowledge since 2020. Learn from industry experts and transform your career.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Course -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Course</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#features" class="text-gray-400 hover:text-blue-500 transition duration-300">Features</a>
+                        </li>
+                        <li>
+                            <a href="#benefits" class="text-gray-400 hover:text-blue-500 transition duration-300">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="#video" class="text-gray-400 hover:text-blue-500 transition duration-300">Video Preview</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="text-gray-400 hover:text-blue-500 transition duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://seo.com" class="text-gray-400 hover:text-blue-500 transition duration-300">Enroll</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Resources -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">SEO Tools</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Community</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:admin@seo.com" class="text-gray-400 hover:text-blue-500 transition duration-300">admin@seo.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">+61 3 9999 9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Melbourne, Victoria, Australia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="text-gray-400">
+                        <p class="leading-relaxed">
+                            © 2024 SEO Academy Melbourne. All rights reserved. Empowering digital professionals worldwide.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-6 md:justify-end">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+            });
+        }
+        
+        // Close mobile menu when clicking on a link
+        if (mobileMenu) {
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Accordion Toggle Function
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current accordion
+            content.classList.toggle('active');
+            button.classList.toggle('active');
+            
+            if (content.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.hover-lift').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
