@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best SEO course in Melbourne. Learn SEO fast with our expert-led courses. Become an expert in 30 days at low cost.">
+    <meta name="keywords" content="SEO course, Melbourne, learn SEO, digital marketing">
+    <meta name="author" content="SEO Academy">
+    <meta property="og:title" content="Best SEO Course in Melbourne - Learn SEO Fast">
+    <meta property="og:description" content="Master SEO in 30 days with our comprehensive, beginner-friendly course.">
+    <meta property="og:type" content="website">
+    <title>Blog - Best SEO Course in Melbourne - Learn SEO Fast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-background {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1460925895917-adf4e565db6d?w=1200&h=800&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25;
+            z-index: 1;
+        }
+        
+        .hero-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button.active {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cta-background {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            position: relative;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 28px;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 36px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            border: 2px solid #667eea;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 400px;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .blog-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .blog-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-read-more:hover {
+            color: #764ba2;
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-chart-line text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SEO Academy</span>
+            </a>
+            
+            <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">
+                ← Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Blog Header Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Our Blog
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Discover expert insights, tips, and strategies to master SEO and digital marketing. Our blog covers everything from beginner fundamentals to advanced techniques that will help you succeed in today's competitive online landscape.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 tracking-tight">
+                    Latest Article
+                </h2>
+                
+                <div class="blog-card hover-lift">
+                    <div class="blog-date">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        October 18, 2025
+                    </div>
+                    
+                    <h3 class="blog-title">
+                        Getting Started with Our Platform
+                    </h3>
+                    
+                    <p class="blog-excerpt">
+                        Master SEO fundamentals to drive organic traffic and boost your online visibility. This comprehensive guide covers three essential pillars: technical SEO (site speed, mobile optimization, structured data), on-page SEO (titles, meta descriptions, content quality), and off-page SEO (link building, brand mentions). Learn keyword research strategies, content creation best practices, and link-building tactics that work. Discover how to measure success through organic traffic, rankings, and conversions while avoiding common mistakes like keyword stuffing and neglecting mobile optimization. SEO requires patience and consistency, but implementing these proven strategies will establish a strong foundation for long-term organic growth and improved search engine rankings.
+                    </p>
+                    
+                    <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5/blog/getting-started-with-our-platform.html" class="blog-read-more">
+                        Read More
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 tracking-tight">
+                    More Articles Coming Soon
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Empty Placeholder Cards -->
+                    <div class="blog-card hover-lift opacity-50">
+                        <div class="blog-date">
+                            Coming Soon
+                        </div>
+                        <h3 class="blog-title">
+                            Article Title
+                        </h3>
+                        <p class="blog-excerpt">
+                            Check back soon for more expert insights and strategies to help you master digital marketing.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-card hover-lift opacity-50">
+                        <div class="blog-date">
+                            Coming Soon
+                        </div>
+                        <h3 class="blog-title">
+                            Article Title
+                        </h3>
+                        <p class="blog-excerpt">
+                            Check back soon for more expert insights and strategies to help you master digital marketing.
+                        </p>
+                    </div>
+                    
+                    <div class="blog-card hover-lift opacity-50">
+                        <div class="blog-date">
+                            Coming Soon
+                        </div>
+                        <h3 class="blog-title">
+                            Article Title
+                        </h3>
+                        <p class="blog-excerpt">
+                            Check back soon for more expert insights and strategies to help you master digital marketing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Purpose Section -->
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 md:p-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                    What You'll Find Here
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="feature-icon mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">
+                            Expert Insights
+                        </h3>
+                        <p class="text-gray-600">
+                            Learn from industry professionals sharing their knowledge, experience, and proven strategies for SEO success.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="feature-icon mb-4">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">
+                            Educational Content
+                        </h3>
+                        <p class="text-gray-600">
+                            Comprehensive guides and tutorials covering everything from SEO basics to advanced digital marketing techniques.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="feature-icon mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">
+                            Actionable Tips
+                        </h3>
+                        <p class="text-gray-600">
+                            Practical advice and strategies you can implement immediately to improve your online visibility and rankings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-background py-16 md:py-24 relative">
+        <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+                Ready to Master SEO?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Join thousands of students who have already become SEO experts. Start your 30-day journey today and unlock unlimited career opportunities.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://seo.com" class="btn-primary text-lg px-10 py-4 font-bold">
+                    Enroll Now - Limited Time Offer
+                    <i class="fas fa-rocket ml-2"></i>
+                </a>
+                <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5" class="btn-secondary text-lg px-10 py-4 font-bold">
+                    Back to Course
+                    <i class="fas fa-arrow-left ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1: About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">SEO Academy</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Empowering professionals with practical SEO knowledge since 2020. Learn from industry experts and transform your career.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Course -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Course</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5#features" class="text-gray-400 hover:text-blue-500 transition duration-300">Features</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5#benefits" class="text-gray-400 hover:text-blue-500 transition duration-300">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5#video" class="text-gray-400 hover:text-blue-500 transition duration-300">Video Preview</a>
+                        </li>
+                        <li>
+                            <a href="https://test-acc-12349.github.io/best-seo-course-in-melbourne-2025-10-18-r9ah5#faq" class="text-gray-400 hover:text-blue-500 transition duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://seo.com" class="text-gray-400 hover:text-blue-500 transition duration-300">Enroll</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Resources -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">SEO Tools</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Community</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:admin@seo.com" class="text-gray-400 hover:text-blue-500 transition duration-300">admin@seo.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">+61 3 9999 9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Melbourne, Victoria, Australia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="text-gray-400">
+                        <p class="leading-relaxed">
+                            © 2024 SEO Academy Melbourne. All rights reserved. Empowering digital professionals worldwide.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-6 md:justify-end">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.hover-lift').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
